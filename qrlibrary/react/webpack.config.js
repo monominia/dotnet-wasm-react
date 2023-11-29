@@ -1,19 +1,13 @@
 const path = require('path');
 
 module.exports = {
+    devServer: {
+        static: './dist',
+    }, 
+    devtool: 'source-map',
     entry: path.resolve(__dirname, 'src', 'index'),
     // mode: 'production',
     mode: 'development',
-    experiments: {
-        outputModule: true
-    },
-    output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: 'index.webpack.js',
-        library: {
-            type: 'module'
-        }
-    },
     module: {
         rules: [
             {
@@ -34,8 +28,7 @@ module.exports = {
             }
         ]
     },
-    externals: {
-        'react': 'react', // Case matters here 
-        'react-dom': 'reactDOM' // Case matters here 
+    resolve: {
+        extensions: ['.js', '.json', '.wasm']
     }
 };
