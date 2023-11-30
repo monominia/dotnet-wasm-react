@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0;netstandard2.0</TargetFrameworks>
     <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
     <WasmMainJSPath>main.js</WasmMainJSPath>
     <OutputType>Exe</OutputType>
@@ -15,5 +15,8 @@
 	
 	<ItemGroup>
 		<PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.7.1" />
+    <PackageReference Include="OpenXmlPowerTools" Version="4.5.3" />
+    <PackageReference Include="System.IO.Packaging" Version="1.0.0.0" />
 	</ItemGroup>
 </Project>
